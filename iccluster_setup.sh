@@ -26,9 +26,9 @@ yes | pip2 install pillow matplotlib mpmath jupyter pandas keras sklearn tensorf
 yes | pip3 install pillow matplotlib mpmath jupyter pandas keras sklearn tensorflow tensorflow-gpu
 
 # install pytorch
-pip2 install http://download.pytorch.org/whl/cu91/torch-0.3.1-cp27-cp27mu-linux_x86_64.whl
+pip2 install http://download.pytorch.org/whl/cu91/torch-0.4.0-cp27-cp27mu-linux_x86_64.whl
 pip2 install torchvision
-pip3 install http://download.pytorch.org/whl/cu91/torch-0.3.1-cp35-cp35m-linux_x86_64.whl
+pip3 install http://download.pytorch.org/whl/cu91/torch-0.4.0-cp35-cp35m-linux_x86_64.whl
 pip3 install torchvision
 
 # set up jupyter (uncomment last line for Python 2.7)
