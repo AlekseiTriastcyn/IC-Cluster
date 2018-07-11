@@ -31,11 +31,11 @@ pip2 install torchvision
 pip3 install http://download.pytorch.org/whl/cu91/torch-0.3.1-cp35-cp35m-linux_x86_64.whl
 pip3 install torchvision
 
-# set up jupyter (for Python 2.7)
+# set up jupyter (uncomment last line for Python 2.7)
 jupyter notebook --allow-root --generate-config
 echo "c.NotebookApp.ip = '*'" >> /root/.jupyter/jupyter_notebook_config.py
 echo "c.NotebookApp.open_browser = False" >> /root/.jupyter/jupyter_notebook_config.py
-python2 -m ipykernel install
+#python2 -m ipykernel install
 
 # clean up
 cd /home
