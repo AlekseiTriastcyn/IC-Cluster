@@ -13,8 +13,8 @@ mkdir /home/downloads
 cd /home/downloads
 
 # download and install CUDA
-wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_9.1.85-1_amd64.deb
-dpkg -i cuda-repo-ubuntu1604_9.1.85-1_amd64.deb
+wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_9.2.148-1_amd64.deb
+dpkg -i cuda-repo-ubuntu1604_9.2.148-1_amd64.deb
 apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/7fa2af80.pub
 apt-get update
 apt-get --assume-yes install cuda
@@ -26,9 +26,9 @@ yes | pip2 install pillow matplotlib mpmath jupyter pandas keras sklearn tensorf
 yes | pip3 install pillow matplotlib mpmath jupyter pandas keras sklearn tensorflow tensorflow-gpu
 
 # install pytorch
-pip2 install http://download.pytorch.org/whl/cu91/torch-0.4.0-cp27-cp27mu-linux_x86_64.whl
+pip2 install http://download.pytorch.org/whl/cu92/torch-0.4.1-cp27-cp27mu-linux_x86_64.whl
 pip2 install torchvision
-pip3 install http://download.pytorch.org/whl/cu91/torch-0.4.0-cp35-cp35m-linux_x86_64.whl
+pip3 install http://download.pytorch.org/whl/cu92/torch-0.4.1-cp35-cp35m-linux_x86_64.whl
 pip3 install torchvision
 
 # set up jupyter (uncomment last line for Python 2.7)
