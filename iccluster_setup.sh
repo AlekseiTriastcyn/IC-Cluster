@@ -13,11 +13,13 @@ mkdir /home/downloads
 cd /home/downloads
 
 # download and install CUDA
-wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_9.2.148-1_amd64.deb
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-ubuntu1804.pin
+sudo mv cuda-ubuntu1804.pin /etc/apt/preferences.d/cuda-repository-pin-600
+sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
+sudo add-apt-repository "deb http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/ /"
 dpkg -i cuda-repo-ubuntu1604_9.2.148-1_amd64.deb
-apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/7fa2af80.pub
-apt-get update
-apt-get --assume-yes install cuda
+sudo apt-get update
+sudo apt-get -y install cuda
 
 # install python packages for machine learning
 yes | pip2 install --upgrade pip
@@ -26,10 +28,8 @@ yes | pip2 install pillow matplotlib mpmath jupyter pandas keras sklearn tensorf
 yes | pip3 install pillow matplotlib mpmath jupyter pandas keras sklearn tensorflow tensorflow-gpu
 
 # install pytorch
-pip2 install http://download.pytorch.org/whl/cu92/torch-0.4.1-cp27-cp27mu-linux_x86_64.whl
-pip2 install torchvision
-pip3 install http://download.pytorch.org/whl/cu92/torch-0.4.1-cp35-cp35m-linux_x86_64.whl
-pip3 install torchvision
+pip2 install torch torchvision
+pip3 install torch torchvision
 
 # set up jupyter (uncomment last line for Python 2.7)
 jupyter notebook --allow-root --generate-config
